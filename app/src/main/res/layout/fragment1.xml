@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="vn.teko.databindingissue.BindingConverters"/>
+
+        <variable
+            name="viewModel"
+            type="vn.teko.databindingissue.Fragment1ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <vn.teko.databindingissue.CommonInput
+            android:id="@+id/input1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            app:actionIcon="@android:drawable/ic_notification_clear_all"
+            app:displayMode="include_action_icon"
+            app:inputMaxLength="10"
+            app:inputText="@={viewModel.field1}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <vn.teko.databindingissue.CommonInput
+            android:id="@+id/input2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="16dp"
+            app:displayMode="include_action_icon"
+            app:inputText="@={viewModel.field2}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input1" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:onClick="@{() -> viewModel.next()}"
+            android:text="Next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input2" />
+
+<!--        <androidx.appcompat.widget.AppCompatEditText-->
+<!--            android:id="@+id/input3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginHorizontal="8dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginBottom="50dp"-->
+<!--            android:background="#20000000"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:money="@={BindingConverters.longToFormattedMoney(viewModel.money)}" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

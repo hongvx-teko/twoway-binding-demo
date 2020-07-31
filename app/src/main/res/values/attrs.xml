@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CommonInput">
+        <attr name="inputText" format="string|reference" />
+        <attr name="inputHint" format="string|reference" />
+        <attr name="inputMaxLength" format="integer" />
+        <attr name="inputStyle" format="reference" />
+        <attr name="drawableTintColor" format="color|reference" />
+        <attr name="drawableStateListColor" format="color|reference" />
+        <attr name="actionIcon" format="reference" />
+        <attr name="actionIconTintColor" format="color|reference" />
+        <attr name="showActionIcon" format="boolean" />
+        <attr name="inputEnabled" format="boolean" />
+        <attr name="displayMode">
+            <flag name="only_text" value="0" />
+            <flag name="include_action_icon" value="1" />
+            <flag name="only_text_with_limit" value="2" />
+            <flag name="include_action_icon_with_limit" value="3" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>
